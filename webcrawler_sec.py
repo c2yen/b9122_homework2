@@ -10,9 +10,10 @@ opened = []
 charges = []
 
 maxNumUrl = 50
+sec_max_output = 20
 print("Starting with url="+str(urls))
 
-while len(urls) > 0 and len(opened) < maxNumUrl and len(charges) < 20:
+while len(urls) > 0 and len(opened) < maxNumUrl and len(charges) < sec_max_output:
     try:
         curr_url=urls.pop(0)
         req = urllib.request.Request(curr_url,headers={'User-Agent': 'Mozilla/5.0'})
